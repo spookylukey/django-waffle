@@ -40,13 +40,8 @@ def syncdb():
 
 
 def schema():
-    """Django version <= 1.6 - Create a schema migration for any changes."""
+    """Create a schema migration for any changes."""
     _local('django-admin.py schemamigration waffle --auto')
-
-
-def makemigrations():
-    """Django version > 1.6 - Create a schema migration for any changes."""
-    _local('django-admin.py makemigrations waffle')
 
 
 def migrate():
